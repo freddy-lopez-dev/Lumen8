@@ -3,6 +3,8 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { BsChevronDown } from 'react-icons/bs';
+import { Link } from '@mui/material';
+import styled from '@emotion/styled';
 
 export default function BasicMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -28,7 +30,7 @@ export default function BasicMenu() {
         <BsChevronDown />
       </Button>
       <Menu
-        id="basic-menu"
+        id="fade-menu"
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
@@ -36,11 +38,21 @@ export default function BasicMenu() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>Fresh Flowers</MenuItem>
-        <MenuItem onClick={handleClose}>Fresh Plants</MenuItem>
-        <MenuItem onClick={handleClose}>Forever Flowers</MenuItem>
-        <MenuItem onClick={handleClose}>Garden</MenuItem>
-        <MenuItem onClick={handleClose}>Glowing Paint</MenuItem>
+        <MenuItem>
+          <Link href={'/category/fresh-flowers'}>Fresh Flowers</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link href={'/category/fresh-plants'}>Fresh Plants</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link href={'/category/forever-flowers'}>Forever Flower</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link href={'/category/indoor-and-outdoor-garden'}>Garden</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link href={'/category/glowing-paint'}>Glowing Paint</Link>
+        </MenuItem>
       </Menu>
     </div>
   );
