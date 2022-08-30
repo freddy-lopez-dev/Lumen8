@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link } from '@mui/material';
 import React from 'react';
 
@@ -71,3 +72,12 @@ export const getStaticProps = async ({ params: { slug } }) => {
 };
 
 export default categoryDetails;
+=======
+import React from 'react';
+
+const [slug] = () => {
+  return <div>[slug]</div>;
+};
+
+export default [slug];
+>>>>>>> 7ab86787acb53fd45804a73e10d44320c7353b57
