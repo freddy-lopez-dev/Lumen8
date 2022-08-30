@@ -1,0 +1,54 @@
+.hero {
+  background: transparent;
+  max-width: 1536px;
+  color: #777;
+  margin: 0 auto;
+  transition: all 400ms ease;
+  height: 85vh;
+}
+
+.hero__details {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  gap: 1.5rem;
+}
+
+.header3 {
+  font-size: 79px;
+  font-weight: 300;
+}
+
+.hero__banner {
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+
+.hero__img {
+  user-select: none;
+  margin: 0 auto;
+}
+
+.btn_slider {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  background: transparent;
+  background: -webkit-linear-gradient(
+    rgba(193, 154, 101, 1),
+    rgba(255, 0, 0, 0)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: left;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn_slider:hover {
+  color: #777;
+  background: -webkit-linear-gradient(rgb(235, 142, 11), rgba(255, 0, 0, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
