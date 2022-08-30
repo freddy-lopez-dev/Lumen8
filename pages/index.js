@@ -3,15 +3,10 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { client } from '../lib/client';
 import Heroslider from '../Components/HeroSlider';
-<<<<<<< HEAD
 import HomeCategory from '../Components/HomeCategory';
 import Newsletter from '../Components/Newsletter';
 
 export default function Home({ products, bannerData, categoryData }) {
-=======
-
-export default function Home({ products, bannerData }) {
->>>>>>> 7ab86787acb53fd45804a73e10d44320c7353b57
   return (
     <div className={styles.container}>
       <Head>
@@ -20,13 +15,10 @@ export default function Home({ products, bannerData }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Heroslider bannerData={bannerData} />
-<<<<<<< HEAD
       <HomeCategory categoryData={categoryData} />
       {console.log(products)}
       {console.log(categoryData)}
       <Newsletter />
-=======
->>>>>>> 7ab86787acb53fd45804a73e10d44320c7353b57
     </div>
   );
 }
@@ -37,16 +29,10 @@ export const getServerSideProps = async () => {
 
   const bannerQuery = '*[_type == "banner"]';
   const bannerData = await client.fetch(bannerQuery);
-
-<<<<<<< HEAD
   const categoryQuery = '*[_type == "category"]';
   const categoryData = await client.fetch(categoryQuery);
 
   return {
     props: { products, bannerData, categoryData },
-=======
-  return {
-    props: { products, bannerData },
->>>>>>> 7ab86787acb53fd45804a73e10d44320c7353b57
   };
 };
