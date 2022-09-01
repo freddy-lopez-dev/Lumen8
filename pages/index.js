@@ -16,9 +16,6 @@ export default function Home({ products, bannerData, categoryData }) {
       </Head>
       <Heroslider bannerData={bannerData} />
       <HomeCategory categoryData={categoryData} />
-      {console.log(products)}
-      {console.log(categoryData)}
-      <Newsletter />
     </div>
   );
 }

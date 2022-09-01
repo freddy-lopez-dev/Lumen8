@@ -13,12 +13,15 @@ import { AiOutlineShopping } from 'react-icons/ai';
 import DropdownMenu from './DropdownMenu';
 import { Link } from '@mui/material';
 
-const pages = ['Our Story', 'News', 'FAQ'];
+import { useStateContext } from '../context/StateContext';
+import Cart from './Cart';
+
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const { showCart, setShowCart, totalQuantities } = useStateContext();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -79,11 +82,9 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem onClick={handleCloseNavMenu}>
+                <DropdownMenu />
+              </MenuItem>
             </Menu>
             <Box
               component="img"
@@ -115,29 +116,14 @@ const ResponsiveAppBar = () => {
             </Link>
           </Box>
           <DropdownMenu />
-          {pages.map((page) => (
-            <Button
-              key={page}
-              onClick={handleCloseNavMenu}
-              sx={{
-                my: 2,
-                width: '6.8rem',
-                color: '#777',
-                display: 'block',
-                fontWeight: '500',
-              }}
-              className="btn"
-            >
-              <a href="#menu">{page}</a>
-            </Button>
-          ))}
           <button
             onClick={() => setShowCart(true)}
             style={{ background: 'transparent', border: '0' }}
           >
             <AiOutlineShopping color="#777" fontSize="30" />
-            <span className="cart-item-qty">0</span>
+            <span className="cart-item-qty">{totalQuantities}</span>
           </button>
+          {showCart && <Cart />}
         </Toolbar>
       </Container>
     </AppBar>
