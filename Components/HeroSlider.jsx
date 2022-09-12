@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import styles from '../styles/Heroslider.module.css';
+import { styles } from '../styles/Heroslider.module.css';
 import { Link } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { urlFor } from '../lib/client';
