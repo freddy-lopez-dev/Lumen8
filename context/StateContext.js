@@ -113,6 +113,16 @@ export const StateContext = ({ children }) => {
     });
   };
 
+  // const mainItem = () => {
+  //   console.log(cartItems);
+
+  //   setCartItems((prevItem) => {
+  //     return (prevItem.map((item) => {
+
+  //     }))
+  //   })
+  // }
+
   return (
     <Context.Provider
       value={{

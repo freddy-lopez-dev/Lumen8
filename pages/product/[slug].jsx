@@ -45,7 +45,6 @@ const ProductDetails = ({ product, products, category }) => {
 
   return (
     <section>
-      {console.log(product)}
       {variant == 'glow' ? (
         <div className={styles.product_details}>
           <div>
