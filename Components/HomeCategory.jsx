@@ -1,6 +1,6 @@
 import { style } from '@mui/system';
 import React from 'react';
-import styles from '../styles/Homecategory.module.css';
+import styles from '../styles/HomeCategory.module.css';
 import { urlFor } from '../lib/client';
 import { Link } from '@mui/material';
 
