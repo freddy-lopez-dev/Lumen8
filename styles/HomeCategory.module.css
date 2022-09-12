@@ -8,7 +8,7 @@
     rgba(193, 154, 101, 1),
     rgba(255, 0, 0, 0)
   );
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: left;
   border: 0;
@@ -18,7 +18,7 @@
 .btn_slider:hover {
   color: #777;
   background: -webkit-linear-gradient(rgb(235, 142, 11), rgba(255, 0, 0, 0));
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
